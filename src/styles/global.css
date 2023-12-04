@@ -1,0 +1,86 @@
+:root {
+  --bg-color1: #222222;
+  --bg-color2: #333333;
+
+  --text-color1: #fff;
+
+  --btn-color: dodgerblue;
+  --btn-color-hover: cornflowerblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color1);
+  color: var(--text-color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 2rem;
+  background-color: var(--bg-color2);
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.sectionForm > form {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#inputLocale {
+  flex: 1;
+  height: 32px;
+  border-radius: 5px;
+  border: none;
+  padding: 0 1rem;
+}
+
+.btnLocale {
+  background-color: var(--btn-color);
+  color: var(--text-color1);
+  border: none;
+  padding: 0 1rem;
+  height: 32px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.btnLocale:hover {
+  cursor: pointer;
+  background-color: var(--btn-color-hover);
+}
+
+.sectionWeather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weatherData > h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.weatherData > span {
+  font-size: 3rem;
+  font-weight: bold;
+}
