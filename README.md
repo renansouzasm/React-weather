@@ -42,6 +42,11 @@ Exemplo de dados que a _**api**_ retornou:
 }
 ```
 
-
 <table>
+    <tr>
+        <th>Preview</th>
+    </tr>
+    <tr>
+        <td><img width="600px" src="https://github.com/renansouzasm/React-weather/assets/101893896/7c5a86bf-ad6b-4558-9d3b-014cf60e5a6d" /></td>
+    </tr>
 </table>
