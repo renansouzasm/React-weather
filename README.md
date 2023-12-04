@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# React Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Um projeto de Condições do tempo feito a partir do curso digital gratuito Front-end em React da Comunidade Ada.
 
-Currently, two official plugins are available:
+A aplicação irá consumir uma API para retornar informações sobre as condições climáticas de um local em relação à pesquisa do usuário.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### API Utilizada no Projeto
+- [OpenWeather](https://openweathermap.org/)
 
-## Expanding the ESLint configuration
+### Como funciona?
+Bom, para rodar é bem simples, basta instalar as dependências do projeto pelo console e utilizar o comando para iniciar.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```node
+npm install 
+npm run dev
+```
 
-- Configure the top-level `parserOptions` property like this:
+Será necessário o uso de uma API key obtida após o cadastro no site, mas fique a vontade para usar 
+a que já está sendo utilizada no projeto, apenas tome cuidado pois essa key pode acabar expirando, por isso 
+é recomendável que você consiga sua própria Key
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
+```javascript
+"https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API key}&lang=pt_br&units=metric"
+```
+
+Exemplo de dados que a _**api**_ retornou:
+
+```json
+{
+"name": "São Paulo",
+"main": {
+    "temp": 22.11
   },
+"weather": [
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "nublado",
+      "icon": "04n"
+    }
+  ]
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+<table>
+</table>
