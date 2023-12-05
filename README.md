@@ -27,8 +27,10 @@ com o prefixo `VITE_REACT`.
 VITE_REACT_API_KEY = "key";
 ```
 
+src/App.tsx
+
 ```javascript
-"https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${ import.meta.env.VITE_REACT_API_KEY }&lang=pt_br&units=metric";
+"URL/appid=${ import.meta.env.VITE_REACT_API_KEY }";
 ```
 
 Exemplo de dados que a _**api**_ retornou:
