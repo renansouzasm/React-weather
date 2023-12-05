@@ -18,7 +18,9 @@ export function App() {
   useEffect(() => {
     async function weather() {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${"fbd70f4dd9fc281af926673bf75e93b1"}&lang=pt_br&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${
+          import.meta.env.VITE_REACT_API_KEY
+        }&lang=pt_br&units=metric`
       );
       const data = await res.json();
 
